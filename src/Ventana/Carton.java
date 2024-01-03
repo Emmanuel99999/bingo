@@ -19,13 +19,18 @@ import javax.swing.JButton;
 import java.awt.Choice;
 import javax.swing.JCheckBoxMenuItem;
 import java.awt.ScrollPane;
+import java.awt.Color;
+import javax.swing.SwingConstants;
 
 public class Carton extends JFrame {
 
 	private static final long serialVersionUID = 1L;
+	protected static int[] llamados;
 	private JPanel contentPane;
 	private JTable carton;
 	private JButton btnNewButton;
+	private JLabel lblNewLabel_1;
+	private JLabel lblNewLabel_2;
 
 	/**
 	 * Launch the application.
@@ -52,7 +57,7 @@ public class Carton extends JFrame {
 		int[][] carton1 = modelo.Carton.creaCarton();
 		String[] columnNames = {"B", "I","N","G","O"};
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 553, 361);
+		setBounds(100, 100, 553, 485);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -65,6 +70,7 @@ public class Carton extends JFrame {
 		        data[i][j] = carton1[i][j]; // Autoboxing converts int to Integer
 		    }
 		}		
+		
 		DefaultTableModel model = new DefaultTableModel(data, columnNames);
 	    contentPane.setLayout(null);
 	    carton = new JTable(model);
@@ -77,8 +83,30 @@ public class Carton extends JFrame {
 	    contentPane.add(lblNewLabel);
 	    
 	    btnNewButton = new JButton("¡BINGO!");
-	    btnNewButton.setBounds(203, 244, 89, 28);
+	    btnNewButton.setBounds(210, 230, 89, 28);
 	    contentPane.add(btnNewButton);
+	    
+	    JPanel panel = new JPanel();
+	    panel.setBackground(new Color(255, 255, 255));
+	    panel.setBounds(161, 279, 105, 51);
+	    contentPane.add(panel);
+	    panel.setLayout(null);
+	    
+	    lblNewLabel_2 = new JLabel("0");
+	    lblNewLabel_2.setFont(new Font("SansSerif", Font.PLAIN, 20));
+	    lblNewLabel_2.setHorizontalAlignment(SwingConstants.CENTER);
+	    lblNewLabel_2.setBounds(6, 6, 93, 40);
+	    panel.add(lblNewLabel_2);
+	    
+	    lblNewLabel_1 = new JLabel("Número llamado");
+	    lblNewLabel_1.setFont(new Font("SansSerif", Font.PLAIN, 16));
+	    lblNewLabel_1.setBounds(17, 284, 143, 46);
+	    contentPane.add(lblNewLabel_1);
+	    
+	    JButton btnNewButton_1 = new JButton("¡Sortear!");
+	    btnNewButton_1.setFont(new Font("SansSerif", Font.PLAIN, 20));
+	    btnNewButton_1.setBounds(296, 279, 120, 51);
+	    contentPane.add(btnNewButton_1);
 	    btnNewButton.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent arg0) {
 				String resultado = modelo.Victoria.verificar();
