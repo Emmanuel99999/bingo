@@ -3,7 +3,7 @@ public class Victoria {
 	// se instancia un carton
 	public static void main(String[] args) {
 		//imprimirCarton();
-		verificar();
+		//verificar();
 }
 	public static int[][] imprimirCarton() {
 	int[][] carton0= modelo.Carton.creaCarton();
@@ -15,7 +15,7 @@ public class Victoria {
        }*/
 	return carton0;     
     }
-	public static void verificar() { 
+	public static String verificar() { 
 	int[][] carton1=imprimirCarton();	// en las siguientes lineas se verifica si ganó el carton, cuando una casilla se llama 
 	// la casilla equivaldrá a 0, por lo cual si el patrón de casillas suma 0 será un patrón ganador
 	// en variables se describen las posibles combinaciones ganadoras
@@ -46,22 +46,22 @@ public class Victoria {
 	//condicionales para encontrar el juego ganador
 	// TODO se puede mejorar con un switch?
 	if (esquinas==0) {
-	System.out.println("gana por esquinas");
+	return "gana por esquinas";
 	}
 	else if (diagonalIzq==0){
-	System.out.println("gana por diagonal izquierda");
+	return "gana por diagonal izquierda";
 	}
 	else if (diagonalDer==0) {
-		System.out.println("gana por diagonal derecha");
+		return"gana por diagonal derecha";
 	}
 	else if(vertical==0) { 
-		System.out.println("gana por vertical");
+		return"gana por vertical";
 	}
 	else if(horizontal==0) { 
-		System.out.println("gana por horizontal");
+		return"gana por horizontal";
 	}
 	else {
-		System.out.println("no hay combinación ganadora");
+		return"no hay combinación ganadora";
 	}
 	
 }}

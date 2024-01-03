@@ -4,7 +4,8 @@ import java.util.HashSet;
 import java.util.Set;
 public class Carton {
 	public static void main(String[] args) {
-	//	System.out.println("test");
+	System.out.println("test");
+    Victoria.verificar();
 	}
 	public static int[][]creaCarton(){
 		int[][] carton = new int[5][5];
