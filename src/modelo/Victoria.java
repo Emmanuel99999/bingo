@@ -2,21 +2,14 @@ package modelo;
 public class Victoria {
 	// se instancia un carton
 	public static void main(String[] args) {
-		//imprimirCarton();
-		//verificar();
 }
 	public static int[][] imprimirCarton() {
 	int[][] carton0= modelo.Carton.creaCarton();
-	/*for (int i = 0; i < carton0.length; i++) {
-        for (int j = 0; j < carton0[i].length; j++) {
-            System.out.print(carton0[i][j] + "|");
-        }
-        System.out.println();
-       }*/
-	return carton0;     
+
+	return carton0;      
     }
-	public static String verificar() { 
-	int[][] carton1=imprimirCarton();	// en las siguientes lineas se verifica si ganó el carton, cuando una casilla se llama 
+	public static String verificar(int[][]carton0) { 
+	int[][] carton1=carton0;	// en las siguientes lineas se verifica si ganó el carton, cuando una casilla se llama 
 	// la casilla equivaldrá a 0, por lo cual si el patrón de casillas suma 0 será un patrón ganador
 	// en variables se describen las posibles combinaciones ganadoras
 	//TODO añadir carton pleno como condición de victoria

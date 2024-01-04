@@ -5,7 +5,7 @@ import java.util.Set;
 public class Carton {
 	public static void main(String[] args) {
 	System.out.println("test");
-    Victoria.verificar();
+    Victoria.verificar(Victoria.imprimirCarton());
 	}
 	public static int[][]creaCarton(){
 		int[][] carton = new int[5][5];
@@ -28,14 +28,6 @@ public class Carton {
             }
             //deja el centro free como todos los cartones de Bingo 0=free
             carton[2][2]=00;
-        
-		// Imprime el array para verificar info
-      /*  for (int i = 0; i < carton.length; i++) {
-            for (int j = 0; j < carton[i].length; j++) {
-                System.out.print(carton[i][j] + "|");
-            }
-            System.out.println();
-        }*/
 		return carton;
 		
 	}

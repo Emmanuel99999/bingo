@@ -8,12 +8,15 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.JButton;
 import java.awt.GridLayout;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 import java.awt.Font;
 import java.awt.Color;
 import javax.swing.SwingConstants;
 import java.awt.event.ActionListener;
 import java.util.HashSet;
 import java.awt.event.ActionEvent;
+import javax.swing.border.MatteBorder;
 
 public class juego extends JFrame {
 	protected int counter=1;
@@ -48,9 +51,9 @@ public class juego extends JFrame {
 		        data1[i] = llamados[i]; // Autoboxing converts int to Integer
 		    };
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 643);
+		setBounds(100, 100, 450, 707);
 		contentPane = new JPanel();
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		contentPane.setBorder(new MatteBorder(1, 1, 1, 1, (Color) new Color(0, 0, 0)));
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
@@ -95,7 +98,7 @@ public class juego extends JFrame {
 		btnNewButton_1.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if(usadosHash.contains(carton1[0][0])) {
+				if(carton1[0][0]==0) {
 				btnNewButton_1.setText("☺");		
 				}}
 		});
@@ -105,7 +108,7 @@ public class juego extends JFrame {
 		btnNewButton_2.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		btnNewButton_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if(usadosHash.contains(carton1[0][1])) {
+				if(carton1[0][1]==0) {
 				btnNewButton_2.setText("☺");		
 			}}
 		});
@@ -115,7 +118,7 @@ public class juego extends JFrame {
 		btnNewButton_3.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		btnNewButton_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if(usadosHash.contains(carton1[0][2])) {
+				if(carton1[0][2]==0) {
 					btnNewButton_3.setText("☺");		
 				}}
 		});
@@ -125,7 +128,7 @@ public class juego extends JFrame {
 		btnNewButton_4.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		btnNewButton_4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if(usadosHash.contains(carton1[0][3])) {
+				if(carton1[0][3]==0) {
 					btnNewButton_4.setText("☺");		
 				}
 			}
@@ -136,7 +139,7 @@ public class juego extends JFrame {
 		btnNewButton_6.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		btnNewButton_6.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if(usadosHash.contains(carton1[0][4])) {
+				if(carton1[0][4]==0) {
 					btnNewButton_6.setText("☺");		
 				}}
 		});
@@ -146,7 +149,7 @@ public class juego extends JFrame {
 		btnNewButton_5.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		btnNewButton_5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if(usadosHash.contains(carton1[1][0])) {
+				if(carton1[1][0]==0) {
 					btnNewButton_5.setText("☺");		
 				}}
 		});
@@ -156,7 +159,7 @@ public class juego extends JFrame {
 		btnNewButton_7.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		btnNewButton_7.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if(usadosHash.contains(carton1[1][1])) {
+				if(carton1[1][1]==0) {
 					btnNewButton_7.setText("☺");		
 				}}
 		});
@@ -166,7 +169,7 @@ public class juego extends JFrame {
 		btnNewButton_8.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		btnNewButton_8.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if(usadosHash.contains(carton1[1][2])) {
+				if(carton1[1][2]==0) {
 					btnNewButton_8.setText("☺");		
 				}}
 		});
@@ -176,7 +179,7 @@ public class juego extends JFrame {
 		btnNewButton_9.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		btnNewButton_9.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if(usadosHash.contains(carton1[1][3])) {
+				if(carton1[1][3]==0) {
 					btnNewButton_9.setText("☺");		
 				}}
 		});
@@ -186,7 +189,7 @@ public class juego extends JFrame {
 		btnNewButton_10.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		btnNewButton_10.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if(usadosHash.contains(carton1[1][4])) {
+				if(carton1[1][4]==0) {
 					btnNewButton_10.setText("☺");		
 				}}
 		});
@@ -196,7 +199,7 @@ public class juego extends JFrame {
 		btnNewButton_13.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		btnNewButton_13.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if(usadosHash.contains(carton1[2][0])) {
+				if(carton1[2][0]==0) {
 					btnNewButton_13.setText("☺");		
 				}}
 		});
@@ -206,7 +209,7 @@ public class juego extends JFrame {
 		btnNewButton_12.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		btnNewButton_12.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if(usadosHash.contains(carton1[2][1])) {
+				if(carton1[2][1]==0) {
 					btnNewButton_12.setText("☺");		
 				}}
 		});
@@ -216,7 +219,7 @@ public class juego extends JFrame {
 		btnNewButton_11.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		btnNewButton_11.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if(usadosHash.contains(carton1[2][2])) {
+				if(carton1[2][2]==0) {
 					btnNewButton_11.setText("☺");		
 				}}
 		});
@@ -226,7 +229,7 @@ public class juego extends JFrame {
 		btnNewButton_16.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		btnNewButton_16.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if(usadosHash.contains(carton1[2][3])) {
+				if(carton1[2][3]==0) {
 					btnNewButton_16.setText("☺");		
 				}}
 		});
@@ -236,7 +239,7 @@ public class juego extends JFrame {
 		btnNewButton_19.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		btnNewButton_19.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if(usadosHash.contains(carton1[2][4])) {
+				if(carton1[2][4]==0) {
 					btnNewButton_19.setText("☺");		
 				}}
 		});
@@ -246,7 +249,7 @@ public class juego extends JFrame {
 		btnNewButton_15.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		btnNewButton_15.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if(usadosHash.contains(carton1[3][0])) {
+				if(carton1[3][0]==0) {
 					btnNewButton_15.setText("☺");		
 				}}
 		});
@@ -256,7 +259,7 @@ public class juego extends JFrame {
 		btnNewButton_20.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		btnNewButton_20.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if(usadosHash.contains(carton1[3][1])) {
+				if(carton1[3][1]==0) {
 					btnNewButton_20.setText("☺");		
 				}}
 		});
@@ -266,7 +269,7 @@ public class juego extends JFrame {
 		btnNewButton_23.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		btnNewButton_23.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if(usadosHash.contains(carton1[3][2])) {
+				if(carton1[3][2]==0) {
 					btnNewButton_23.setText("☺");		
 				}}
 		});
@@ -276,7 +279,7 @@ public class juego extends JFrame {
 		btnNewButton_14.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		btnNewButton_14.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if(usadosHash.contains(carton1[3][3])) {
+				if(carton1[3][3]==0) {
 					btnNewButton_14.setText("☺");		
 				}}
 		});
@@ -286,7 +289,7 @@ public class juego extends JFrame {
 		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if(usadosHash.contains(carton1[3][4])) {
+				if(carton1[3][4]==0) {
 					btnNewButton.setText("☺");		
 				}}
 		});
@@ -296,7 +299,7 @@ public class juego extends JFrame {
 		btnNewButton_18.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		btnNewButton_18.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if(usadosHash.contains(carton1[4][0])) {
+				if(carton1[4][0]==0) {
 					btnNewButton_18.setText("☺");		
 				}}
 		});
@@ -306,7 +309,7 @@ public class juego extends JFrame {
 		btnNewButton_17.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		btnNewButton_17.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if(usadosHash.contains(carton1[4][1])) {
+				if(carton1[4][1]==0) {
 					btnNewButton_17.setText("☺");		
 				}}
 		});
@@ -316,7 +319,7 @@ public class juego extends JFrame {
 		btnNewButton_24.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		btnNewButton_24.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if(usadosHash.contains(carton1[4][2])) {
+				if(carton1[4][2]==0) {
 					btnNewButton_24.setText("☺");		
 				}}
 		});
@@ -326,7 +329,7 @@ public class juego extends JFrame {
 		btnNewButton_22.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		btnNewButton_22.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if(usadosHash.contains(carton1[4][3])) {
+				if(carton1[4][3]==0) {
 					btnNewButton_22.setText("☺");		
 				}}
 		});
@@ -336,7 +339,7 @@ public class juego extends JFrame {
 		btnNewButton_21.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		btnNewButton_21.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if(usadosHash.contains(carton1[4][4])) {
+				if(carton1[4][4]==0) {
 					btnNewButton_21.setText("☺");		
 				}}
 		});
@@ -365,33 +368,33 @@ public class juego extends JFrame {
 		turno.setFont(new Font("Tahoma", Font.PLAIN, 19));
 		
 		JLabel lblNewLabel_1 = new JLabel("B");
+		lblNewLabel_1.setBounds(10, 134, 79, 54);
 		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 45));
-		lblNewLabel_1.setBounds(10, 134, 79, 54);
 		contentPane.add(lblNewLabel_1);
 		
 		JLabel lblNewLabel_1_1 = new JLabel("I");
+		lblNewLabel_1_1.setBounds(99, 134, 79, 54);
 		lblNewLabel_1_1.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel_1_1.setFont(new Font("Tahoma", Font.PLAIN, 45));
-		lblNewLabel_1_1.setBounds(99, 134, 79, 54);
 		contentPane.add(lblNewLabel_1_1);
 		
 		JLabel lblNewLabel_1_2 = new JLabel("N");
+		lblNewLabel_1_2.setBounds(176, 134, 79, 54);
 		lblNewLabel_1_2.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel_1_2.setFont(new Font("Tahoma", Font.PLAIN, 45));
-		lblNewLabel_1_2.setBounds(176, 134, 79, 54);
 		contentPane.add(lblNewLabel_1_2);
 		
 		JLabel lblNewLabel_1_3 = new JLabel("G");
+		lblNewLabel_1_3.setBounds(260, 134, 79, 54);
 		lblNewLabel_1_3.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel_1_3.setFont(new Font("Tahoma", Font.PLAIN, 45));
-		lblNewLabel_1_3.setBounds(260, 134, 79, 54);
 		contentPane.add(lblNewLabel_1_3);
 		
 		JLabel lblNewLabel_1_4 = new JLabel("O");
+		lblNewLabel_1_4.setBounds(347, 134, 79, 54);
 		lblNewLabel_1_4.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel_1_4.setFont(new Font("Tahoma", Font.PLAIN, 45));
-		lblNewLabel_1_4.setBounds(347, 134, 79, 54);
 		contentPane.add(lblNewLabel_1_4);
 		
 		JButton btnNewButton_25 = new JButton("¡SORTEAR!");
@@ -400,12 +403,20 @@ public class juego extends JFrame {
 				String localSorteado = "1";
 				String localTurno = "0";
 				if(counter<llamados.length) {
-				localSorteado=Integer.toString(llamados[counter]);
-				localTurno = Integer.toString(counter);
+				localSorteado=Integer.toString(llamados[counter]);//llama una por una la lista de números al azar del 1-75
+				localTurno = Integer.toString(counter); //es el mismo counter mostrando los turnos son 75 turnos pero muestra hasta 74
 				numSort.setText(localSorteado);
-				turno.setText(localTurno);
-				usadosHash.add(llamados[counter]);
-				counter+=1;}
+				turno.setText(localTurno); //cambia las label para actualizar la información al usuario
+				usadosHash.add(llamados[counter]); //el número llamado se añade a un hashset
+				counter+=1;//sube 1 el contador para recorrer manualmente toda la lista
+				//recorrer toda el array 5x5 buscando si el número está usado
+				for (int i = 0; i < 5; i++) {
+		            for (int j = 0; j < 5; j++) {
+		                if (usadosHash.contains(carton1[i][j])) {
+		                    carton1[i][j] = 0;
+		                }
+		            }}
+		        }
 				else {
 					numSort.setText("Fin");
 				}
@@ -416,5 +427,16 @@ public class juego extends JFrame {
 		btnNewButton_25.setFont(new Font("Tahoma", Font.PLAIN, 28));
 		btnNewButton_25.setBounds(25, 47, 176, 55);
 		panel.add(btnNewButton_25);
+		
+		JButton btnNewButton_26 = new JButton("¡¡BINGO!!");
+		btnNewButton_26.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String resultado=modelo.Victoria.verificar(carton1);
+				JOptionPane.showMessageDialog(null, resultado, "Resultado", JOptionPane.INFORMATION_MESSAGE);
+			}
+		});
+		btnNewButton_26.setFont(new Font("Tahoma", Font.PLAIN, 30));
+		btnNewButton_26.setBounds(20, 605, 405, 54);
+		contentPane.add(btnNewButton_26);
 	}
 }
