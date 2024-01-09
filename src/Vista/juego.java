@@ -1,4 +1,4 @@
-package Ventana;
+package Vista;
 
 import java.awt.EventQueue;
 
@@ -45,10 +45,11 @@ public class juego extends JFrame {
 	 */
 	public juego() {
 		setResizable(false);
+		//el array de Int se vuelve array de Objetos
 		int[] llamados= modelo.Sortear.sortear();
 		Object[] data1 = new Object[llamados.length];
 		for (int i = 0; i < llamados.length; i++) {
-		        data1[i] = llamados[i]; // Autoboxing converts int to Integer
+		        data1[i] = llamados[i]; // Autoboxing convierte int to Integer
 		    };
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 707);
@@ -404,7 +405,7 @@ public class juego extends JFrame {
 				String localTurno = "0";
 				if(counter<llamados.length) {
 				localSorteado=Integer.toString(llamados[counter]);//llama una por una la lista de números al azar del 1-75
-				localTurno = Integer.toString(counter); //es el mismo counter mostrando los turnos son 75 turnos pero muestra hasta 74
+				localTurno = Integer.toString(counter+1); //es el mismo counter mostrando los turnos son 75 turnos pero muestra hasta 74
 				numSort.setText(localSorteado);
 				turno.setText(localTurno); //cambia las label para actualizar la información al usuario
 				usadosHash.add(llamados[counter]); //el número llamado se añade a un hashset

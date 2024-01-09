@@ -4,9 +4,9 @@ public class Victoria {
 	public static void main(String[] args) {
 }
 	public static int[][] imprimirCarton() {
-	int[][] carton0= modelo.Carton.creaCarton();
+	//int[][] carton0= modelo.Carton.creaCarton();
 
-	return carton0;      
+	//return carton0;      
     }
 	public static String verificar(int[][]carton0) { 
 	int[][] carton1=carton0;	// en las siguientes lineas se verifica si ganó el carton, cuando una casilla se llama 

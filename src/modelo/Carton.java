@@ -4,12 +4,10 @@ import java.util.HashSet;
 import java.util.Set;
 public class Carton {
 	public static void main(String[] args) {
-	System.out.println("test");
-    Victoria.verificar(Victoria.imprimirCarton());
 	}
 	public static int[][]creaCarton(){
 		int[][] carton = new int[5][5];
-		Set<Integer> usedNumbers = new HashSet<>();
+		Set<Integer> numerosUsados = new HashSet<>();
 		for (int i = 0; i < carton.length; i++) {
 			//genera número aleatorio para cada casilla según su rango, con el hashset verificamos si el número ya se usó, si se usó bajamos el contador para intentar de nuevo
 		
@@ -17,9 +15,9 @@ public class Carton {
             	Random aleatorio = new Random();
             	int numero1_15 =aleatorio.nextInt(15)+1;
             	int numeroBase = (15*j)+numero1_15;
-            	if(!usedNumbers.contains(numeroBase)) {
+            	if(!numerosUsados.contains(numeroBase)) {
             	carton[i][j] = numeroBase;
-            	usedNumbers.add(numeroBase);
+            	numerosUsados.add(numeroBase);
             	}
             	else {
             		j--;

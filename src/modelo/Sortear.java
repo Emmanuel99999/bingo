@@ -6,21 +6,21 @@ public class Sortear {
 	}
 	public static int[]sortear() {
 	    // array vacío con los 75 espacios
-		int[] numPool=new int[75];
+		int[] piscinaNum=new int[75];
 		//crea el array con un bucle
-		for (int i = 0; i <numPool.length; i++) {
-		numPool[i]=i+1;
+		for (int i = 0; i <piscinaNum.length; i++) {
+		piscinaNum[i]=i+1;
 		}
 		//desordena el arreglo aleatoriamente
 		Random random = new Random();
-        for (int i = 0; i < numPool.length; i++) {
-            int j = random.nextInt(numPool.length);
-            int temp = numPool[i];
-            numPool[i] = numPool[j];
-            numPool[j] = temp;
+        for (int i = 0; i < piscinaNum.length; i++) {
+            int j = random.nextInt(piscinaNum.length);
+            int temp = piscinaNum[i];
+            piscinaNum[i] = piscinaNum[j];
+            piscinaNum[j] = temp;
             }
         //imprime  los 75 números ya randomizados, no sé repiten
-		return numPool;
+		return piscinaNum;
 		}
 	//metodo que recorre toda la lista de números
 	public static void llamar() {
