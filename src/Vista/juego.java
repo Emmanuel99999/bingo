@@ -405,7 +405,7 @@ public class juego extends JFrame {
 				String localTurno = "0";
 				if(counter<llamados.length) {
 				localSorteado=Integer.toString(llamados[counter]);//llama una por una la lista de números al azar del 1-75
-				localTurno = Integer.toString(counter+1); //es el mismo counter mostrando los turnos son 75 turnos pero muestra hasta 74
+				localTurno = Integer.toString(counter); //es el mismo counter mostrando los turnos son 75 turnos pero muestra hasta 74
 				numSort.setText(localSorteado);
 				turno.setText(localTurno); //cambia las label para actualizar la información al usuario
 				usadosHash.add(llamados[counter]); //el número llamado se añade a un hashset
